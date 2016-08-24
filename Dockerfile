@@ -13,7 +13,7 @@ ENV ANDROID_API_LEVELS android-17,android-18,android-19,android-20,android-21,an
 ENV ANDROID_HOME /opt/android-sdk-linux
 ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
-# Add the WebUpd8 Oracle Java PPA repository for OpenJDK8 and enable gradle daemon
+# Add OpenJDK8 and enable gradle daemon
 RUN echo "deb http://http.debian.net/debian jessie-backports main" | tee -a /etc/apt/sources.list && \
     echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | debconf-set-selections && \
     mkdir -p ~/.gradle/ && \
